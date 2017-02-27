@@ -14,7 +14,6 @@ html {
   height: 100%;
   box-sizing: border-box;
 }
-
 *,
 *:before,
 *:after {
@@ -26,95 +25,131 @@ body {
   	margin: 0;
   	padding-bottom: 2rem;
   	min-height: 100%;
-
   	font-family: 'Open Sans', sans-serif;
 	font-size: 1em; 
 }
-
-
-
 #headerDiv {
-	width: 85%;
 	margin: 0 auto;
+	background-color: #94C1BF;
 }
-
 h1 {
-	color: navy;
+	color: #333;
 	font-size: 3rem;
 	font-weight: bold;
 	max-width: 100%;
 	margin: 0 auto;
 	text-align: center;
 }
-
 .sectionHeader {
-	margin-left: 2rem;
-	color: orange;
+	margin: 1rem;
+	color: #444;
 	font-size: 2rem;
 	font-weight: bold;
-	text-align: left;
+	text-align: center;
+	background-color: #bcdad9;
 }
-
 .sectionContainerDiv {
-	width: 95%;
+	width: 100%;
 	margin: 0 auto;
+	align-items: center;
+	padding: .5rem;
 }
-
 #petsContainerDiv {
 	text-align: center; /* need this to center div children within */
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-wrap: wrap;
+	width: 100%;
+	background-color: #6DA5A3;
 }
-
 .petDiv {
 	display: inline-block;
 	min-height: 15rem;
+	min-width: 13.7rem;
 	width: 32%;
 	margin: 0 auto;
 	background-size: cover;
+	background-position: center;
+	max-height: 20rem;
+	list-style-type: none;
 }
-
+.petDiv:hover {
+    box-shadow: 0 0 4px 2px rgba(50, 50, 50, 0.5);
+}
 #pet1Div {
 	background-image: url("images/pet4.jpeg");   		
 }
-
 #pet2Div {
-	background-image: url("images/pet5.jpeg");   		
-	
+	background-image: url("images/pet5.jpeg");
 }
-
 #pet3Div {
 	background-image: url("images/pet3.jpeg");   		
-	
 }
-
-
-
+#pet4Div {
+	background-image: url("images/pet2.jpeg");   		
+}
+#pet5Div {
+	background-image: url("images/pet1.jpeg");   		
+}
+#pet6Div {
+	background-image: url("images/hoverCat.jpg");   		
+}
+.hoverShadow: hover {
+	color: gray;
+}
 #adoptText {
-	margin-left: 3rem;
+	margin: 3rem;
+	text-align: center;
 }
-
 footer {
 	margin-top: 5rem;
 }
-
 #footerCopyright {
 	text-align: center;
 	width: 30%;
 	margin: 0 auto;
 	font-size: .8rem;
-
 	position: absolute;
   	right: 0;
   	bottom: 0;
   	left: 0;
   	padding: .8rem;
+  	background-color: #347E7B;
 }
-
-
 /* responsive media tags */
 /* make your site responive so that it looks good on various popular phones such as
-** the iphone 5, iphone 6, nexus 6P, and iPad. The smallest of these is the iphone5 which
+** the iphone 5 320px, iphone 6 375px, nexus 6P 412px, and iPad 768px. The smallest of these is the iphone5 which
 ** has a width of 320 pixels 
 */
-@media only screen and (max-width: 600px) {
-	
+@media screen and (max-width: 768px) { /*iPad*/
+	.petDiv {
+		width: 30%;
+		margin: .5rem;
+	}
+}
+@media screen and (max-width: 415px) { /*Nexus 6p*/
+	.petDiv {
+		margin: .25rem;
+	}
+	h1 {
+		font-size: 34px;
+	}
+}
+@media screen and (max-width: 376px) { /*iPhone 6*/
+	.petDiv {
+		width: 95%;
+		margin: .5rem;
+	}
+	h1 {
+		font-size: 30px;
+	}
+}
+@media screen and (max-width: 320px) { /*iPhone 5*/
+	.petDiv {
+		width: 100%;
+		margin: .5rem;
+	}
+	h1 {
+		font-size: 26px;
+	}
 }
